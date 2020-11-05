@@ -151,7 +151,8 @@ export class AutocompleteInputView extends TextInputView {
         }
 
         for (const text of this.model.completions) {
-          if (acnorm(text).startsWith(acnorm(value))) {
+          // text.toLowerCase().includes(value.toLowerCase())
+          if (acnorm(text).includes(acnorm(value))) {
             completions.push(text)
           }
         }
